@@ -1,0 +1,12 @@
+// index.js
+const os = require('os');
+
+function bytesToMB(bytes) {
+  return (bytes / 1024 / 1024).toFixed(2); // returns string like "123.45"
+}
+
+console.log("Welcome to WebTeam Node.js Internship!");
+console.log('--- System Info (from os module) ---');
+console.log('Platform      :', os.platform());        // e.g., 'linux', 'win32', 'darwin'
+console.log('CPU Arch      :', os.arch());            // e.g., 'x64'
+console.log('Free Memory   :', os.freemem(), 'bytes (≈ ' + bytesToMB(os.freemem()) + ' MB)');
